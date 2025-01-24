@@ -1,22 +1,7 @@
-import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
 import {
-  FacebookIcon,
-  TwitterIcon,
-  InstagramIcon,
-  YoutubeIcon,
-  LinkedinIcon,
   Phone,
   Mail,
 } from "lucide-react";
-
-const socialLinks = [
-  { icon: FacebookIcon, href: "#", label: "Facebook" },
-  { icon: TwitterIcon, href: "#", label: "Twitter" },
-  { icon: InstagramIcon, href: "#", label: "Instagram" },
-  { icon: YoutubeIcon, href: "#", label: "YouTube" },
-  { icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-];
 
 export default function Footer() {
   return (
@@ -35,35 +20,6 @@ export default function Footer() {
                 className="object-contain"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Newsletter and Social Links */}
-        <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 border-t border-b py-8">
-          <div className="flex gap-2 w-full max-w-md">
-            <input
-              type="email"
-              placeholder="Enter email address"
-              className="input"
-            />
-            <Button
-              variant="default"
-              className="bg-black text-white hover:bg-black/90"
-            >
-              Subscribe Newsletter
-            </Button>
-          </div>
-          <div className="flex gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-100 text-amber-700 hover:bg-amber-200 transition-colors"
-              >
-                <social.icon className="w-5 h-5" />
-                <span className="sr-only">{social.label}</span>
-              </a>
-            ))}
           </div>
         </div>
 

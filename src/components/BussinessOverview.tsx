@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const BusinessOverview = () => {
+  const [isVision, setIsVision] = useState(false)
+
   return (
     <div className="bg-blue-50 py-20 my-32">
       <div className="container flex mx-auto px-4">
@@ -34,22 +38,24 @@ const BusinessOverview = () => {
           style={{ flex: "0 0 30%" }}
         >
           <div className="flex">
-            <button className="px-4 py-2 text-blue-600 border-b-2 border-blue-600 focus:outline-none">
+            <button className={`px-4 py-2 ${!isVision ? 'text-blue-600 border-blue-600 border-b-2' : 'text-gray-500'} hover:text-blue-600 focus:outline-none`} onClick={() => setIsVision(false)}>
               Our Mission
             </button>
-            <button className="px-4 py-2 text-gray-500 hover:text-blue-600 focus:outline-none">
+            <button className={`px-4 py-2 ${isVision ? 'text-blue-600 border-blue-600 border-b-2' : 'text-gray-500'} hover:text-blue-600 focus:outline-none`} onClick={() => setIsVision(true)}>
               Our Vision
             </button>
           </div>
           <div className="mt-4">
-            <p className="text-gray-600">
+            {!isVision ? <p className="text-gray-600">
               Our Mission is truly aligned with our Vision. We are committed to
               providing our clients top-of-the-line customer services, at par
               with the best industry standards and practices. Backed by high
               moral and integrity values, we fulfill all our commitments without
               any compromises on the aspect of quality from the beginning of the
               project to the end.
-            </p>
+            </p> : 
+            <p>vision</p>
+            }
           </div>
         </div>
       </div>
