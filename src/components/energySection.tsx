@@ -1,7 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Facebook, Twitter, Instagram, Youtube, Linkedin } from "lucide-react";
 
 export function EnergySection() {
   return (
@@ -43,40 +41,6 @@ export function EnergySection() {
                 className="w-full object-cover"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Newsletter and Social Links */}
-        <div className="mt-24 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex w-full max-w-md">
-            <Input
-              type="email"
-              placeholder="Enter email address"
-              className="rounded-r-none"
-            />
-            <Button className="rounded-l-none bg-black hover:bg-gray-900 text-white">
-              Subscribe Newsletter
-            </Button>
-          </div>
-
-          <div className="flex gap-4">
-            {[
-              { Icon: Facebook, label: "Facebook" },
-              { Icon: Twitter, label: "Twitter" },
-              { Icon: Instagram, label: "Instagram" },
-              { Icon: Youtube, label: "Youtube" },
-              { Icon: Linkedin, label: "LinkedIn" },
-            ].map(({ Icon, label }) => (
-              <Button
-                key={label}
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-yellow-100 hover:bg-yellow-200 text-yellow-600"
-              >
-                <Icon className="h-5 w-5" />
-                <span className="sr-only">{label}</span>
-              </Button>
-            ))}
           </div>
         </div>
       </div>

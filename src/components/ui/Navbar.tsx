@@ -1,6 +1,12 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
-export default function Navbar({ imgSrc }: { imgSrc: string }) {
+export default function Navbar({
+  imgSrc,
+  linkColor,
+}: {
+  imgSrc: string;
+  linkColor?: "white" | "black";
+}) {
   return (
     <nav className="absolute top-0 left-0 right-0 z-10">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -16,28 +22,28 @@ export default function Navbar({ imgSrc }: { imgSrc: string }) {
         <div className="hidden md:flex gap-8">
           <a
             key={"Home"}
-            href="../home"
-            className="text-white hover:text-gray-200 transition-colors"
+            href="/"
+            className={`hover:text-gray-500 transition-colors ${linkColor === "black" ? "text-black" : "text-white"}`}
           >
-            home
+            Home
           </a>
           <Link
             to="/AboutUs"
-            className="text-white hover:text-gray-200 transition-colors"
+            className={`hover:text-gray-500 transition-colors ${linkColor === "black" ? "text-black" : "text-white"}`}
           >
             About Us
           </Link>
-          <a
-            key={"bussiness"}
-            href="../AboutUs"
-            className="text-white hover:text-gray-200 transition-colors"
+          <Link
+            key={"business"}
+            to="/ourBusiness"
+            className={`hover:text-gray-500 transition-colors ${linkColor === "black" ? "text-black" : "text-white"}`}
           >
-            Our Bussiness
-          </a>
+            Our Business
+          </Link>
           <a
             key={"contact"}
-            href="../AboutUs"
-            className="text-white hover:text-gray-200 transition-colors"
+            href="/contact"
+            className={`hover:text-gray-500 transition-colors ${linkColor === "black" ? "text-black" : "text-white"}`}
           >
             Contact Us
           </a>
