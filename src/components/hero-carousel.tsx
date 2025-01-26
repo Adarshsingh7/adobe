@@ -25,7 +25,7 @@ const slides: Slide[] = [
     title: "DELIVERING VALUE",
     subtitle: "THROUGH INNOVATION",
     category: "PETRO-CHEMICALS",
-    image: "/Video.png",
+    image: "/Video2.png",
   },
   {
     title: "FORGING AHEAD",
@@ -37,7 +37,7 @@ const slides: Slide[] = [
     title: "CONNECTING WORLDS",
     subtitle: "THROUGH LOGISTICS",
     category: "SHIPPING & LOGISTICS",
-    image: "/Video.png",
+    image: "/Video2.png",
   },
 ];
 
